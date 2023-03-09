@@ -52,7 +52,7 @@ elif [[ $(cat /proc/cpuinfo | grep -Po -m 1 'model name\t: \K.*$') = "Intel(R) A
 elif [[ $(cat /proc/cpuinfo | grep -Po 'Hardware\t: \K.*$') = "ODROID-XU3" ]]; then
   echo -e "\033[0;34mFound ODROID\033[0m"
   DEVICE="ODROID"
-elif [[ $(cat /proc/cpuinfo | grep -Po 'Hardware\t: \K.*$') = "BCM2709" ]]; then
+elif [[ $(cat /proc/cpuinfo | grep -Po 'Hardware\t: \K.*$') = "BCM2711" ]]; then
   echo -e "\033[0;34mFound Raspberry Pi\033[0m"
   DEVICE="RPi"
 elif [[ $(cat /proc/cpuinfo | grep -Po 'Hardware\t: \K.*$') = "BCM2835" ]]; then
@@ -82,7 +82,7 @@ fi
 if [[ $(sudo dpkg-query -l | grep flytcore-pe | wc -l) = "0" ]]; then
   echo ""
 else
-    echo -e "\033[0;31m FlytOS already installed. Removing FlytOS before proceeding.\033[0m"
+    echo -e "\033[0;31m FlytOS already installed. Removing FlytOS before proceeding.\033[0m"                            
     dpkg -r flytcore-pe
 fi
 
