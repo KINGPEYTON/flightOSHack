@@ -116,17 +116,17 @@ fi
 su -c 'rosdep update' $SUDO_USER
 
 #installing known python dependencies
-apt-get install -y python-pip python-serial python-flask python-wtforms python-sqlalchemy python-concurrent.futures python-mock python-zmq python-twisted python-future
-sudo -H pip install --upgrade pip
-sudo -H pip install flask_cors flask_reverse_proxy flask_restful tblib webargs==5.5.3 click flask_security httplib2 simple_json pyzmp pyros-setup requests tornado==4.5.1
-sudo -H pip install Flask==0.10.1 marshmallow==2.21.0
+apt-get install -y python-pip3 python-serial python-flask python-wtforms python-sqlalchemy python-concurrent.futures python-mock python-zmq python-twisted python-future
+sudo -H pip3 install --upgrade pip3
+sudo -H pip3 install flask_cors flask_reverse_proxy flask_restful tblib webargs==5.5.3 click flask_security httplib2 simple_json pyzmp pyros-setup requests tornado==4.5.1
+sudo -H pip3 install Flask==0.10.1 marshmallow==2.21.0
 
 #installing known ros dependencies
 apt-get install -y ros-kinetic-image-proc ros-kinetic-image-transport-plugins ros-kinetic-image-transport ros-kinetic-rosbridge-suite ros-kinetic-control-toolbox ros-kinetic-eigen-conversions ros-kinetic-camera-info-manager ros-kinetic-pyros-utils libxslt-dev libxml2-dev
 
 #installing other dependencies
 apt-get install -y v4l2loopback-utils locate lsof minicom libglib2.0-dev gstreamer1.0-tools gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly ethtool curl
-pip install certifi pyserial pymavlink
+pip3 install certifi pyserial pymavlink
 
 #removing some modules
 apt remove -y modemmanager xfce4-power-manager
